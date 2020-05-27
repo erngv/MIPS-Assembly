@@ -1,6 +1,6 @@
 # Assembly Projects in MIPS
 
-### This repository contains some assembly and C code from different projects from my Computer Organization course.
+### This repository contains some assembly code written in the MIPS Assembler and Runtime Simulator. Each project folder also contains the C code from which each respective assembly code was written, as well as input and output sample files to test the `.asm` files. To download the MARS simulator, visit: http://courses.missouristate.edu/KenVollmar/MARS/download.htm 
  
 #### `Binomial Coefficient`
 
@@ -20,4 +20,5 @@ This program takes a sequence of words and turns them into a story (see input an
 
 #### `Simple Sort of Structures`
 
-
+This program, very similarly to `Bubble Sort of Strings`, sorts records in increasing order using the `struct` C data type. Each record has different integer fields: year, month, date-of-birth, and ID. Notice that the records are sorted by date-of-birth, but if two dates-of-birth are the same, then they are ordered based on the IDs. The first input represents the number of records to sort.
+ 
