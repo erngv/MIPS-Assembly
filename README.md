@@ -8,7 +8,7 @@ This program implements a recursive implementation of the binomial coefficient b
 
 #### `Bubble Sort of Strings`
 
-This program implements the bubble sort algorithm to sort strings in ascending order. Notice that this programs uses load and store byte to read and write characters, instead of load and store word, which access four-byte integers. See the input and output sample files for more information.
+This program implements the bubble sort algorithm to sort strings in ascending order. Notice that this programs uses load and store byte to read and write characters, instead of load and store word, which access four-byte integers. See the input and output sample files for more information; the first integer in the input sample file denotes the number of strings to sort, including the blank lines.
 
 #### `Matrix Multiplication`
 
