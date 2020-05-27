@@ -16,4 +16,8 @@ In this program matrices are represented as linear or one-dimensional arrays, in
 
 #### `Nursery Rhyme`
 
+This program takes a sequence of words and turns them into a story (see input and output sample files for more details). This repository contains both a recursive and iterative implementation in C; however, the assembly version is implemented iteratively. Notice that the input ends when the string `END` is encountered, the number of animal-lyrics pairs is determined at runtime and should not to exceed 20 pairs, each animal name will not exceed 15 characters (including null terminator), and each lyrics line will not exceed 60 characters.
+
 #### `Simple Sort of Structures`
+
+
