@@ -1,6 +1,6 @@
-#---------------------------------------------------------------------------------------------------#
-# Lab 8: Matrix Multiplication
-#---------------------------------------------------------------------------------------------------#
+#===============================================================================================
+# Matrix Multiplication
+#===============================================================================================
 
 .data
  	AA:     	.space 400  		# int AA[100]
@@ -17,19 +17,15 @@
 
 main:
 
-#------- INSERT YOUR CODE HERE for main ------------------------------------------------------------#
+#===============================================================================================
 #
-#  Best is to convert the C program line by line
-#    into its assembly equivalent. Carefully review
-#    the coding templates near the end of Lecture 8.
-#
-#  1.  First, read m (the matrices will then be size mxm).
+#  1.  First, read m (the matrices will then be size m times m).
 #  2.  Next, read matrix A followed by matrix B.
-#  3.  Compute matrix product. You will need triple-nested loops for this.
-#  4.  Print the result, one row per line, with one (or more) space(s) between values within a row.
-#  5.  Exit.
+#  3.  Compute matrix multiplication with a triple-nested loop.
+#  4.  Print the result, one row per line, with one or more spaces between values within a row.
+#  5.  End the program.
 #
-#------------ END CODE -----------------------------------------------------------------------------#
+#===============================================================================================
 
 	# Read the value of m
 	addi	$v0, $0, 5			# system call 5 is for reading an integer
@@ -127,15 +123,6 @@ forloop6:
 	add	$t1, $t1, $t0			# increment the value of i by m
 	j	forloop4
 
-exit:					# This is code to terminate the program -- do not mess with this!
+exit:						# terminate the program
 	addi 	$v0, $0, 10			# system call code 10 for exit
   	syscall					# exit the program
-
-#------- If you decide to make other functions, place their code here ------------------------------#
-#
-#  You do not have to use helper methods, but you may if you would like to.
-#  If you do use them, be sure to do all the proper stack management.
-#  For this exercise though, it is easy enough to write all your code
-#  within main.
-#
-#------------ END CODE -----------------------------------------------------------------------------#
