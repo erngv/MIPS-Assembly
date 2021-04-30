@@ -2,11 +2,10 @@
 # Matrix Multiplication
 #===============================================================================================
 .data
-AA: .space 400                      # int AA[100]
-BB: .space 400                      # int BB[100]
-CC: .space 400                      # int CC[100]
-m:  .space 4
-
+AA:      .space 400                 # int AA[100]
+BB:      .space 400                 # int BB[100]
+CC:      .space 400                 # int CC[100]
+m:       .space 4
 newline: .asciiz "\n"
 space:   .asciiz " "
 

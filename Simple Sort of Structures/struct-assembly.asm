@@ -2,18 +2,16 @@
 # Simple Sort of Structures
 #==========================================================================================
 .data
-  	newline:	.asciiz "\n"
-  	space:  	.asciiz " "
-  	year:		.space 200
-  	month:		.space 200
-  	day:		.space 200
-  	ID:		.space 200
+newline: .asciiz "\n"
+space:   .asciiz " "
+year:	 .space 200
+month:	 .space 200
+day:     .space 200
+ID:		 .space 200
 
 .text
-
 main:
-    	# Read the value of recNum
-	addi	$v0, $0, 5			# System call 5 is for reading an integer
+	addi	$v0, $0, 5			    # System call 5 is for reading an integer
   	syscall 				# Integer value read is in $v0
 	add	$t0, $0, $v0			# Copy the value of recNum into $t0
   	li	$t1, 0 				# $t1 = initial value of i
