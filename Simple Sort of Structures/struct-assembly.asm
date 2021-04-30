@@ -101,7 +101,7 @@ s_elif:
     beq     $t5, $t4, t_elif
 
     addi    $t2, $t2, 1             # j++
-    beq     $t2, $t0, forloop2		# outer loop
+    beq     $t2, $t0, forloop2      # outer loop
     j       forloop3                # inner loop	
 
 t_elif:
