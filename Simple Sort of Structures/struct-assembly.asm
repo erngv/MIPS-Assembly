@@ -33,7 +33,7 @@ forloop1:
     syscall                         # integer value read is in $v0
     add     $t2, $0, $v0
     sll     $a1, $t1, 2
-    sw    	$t2, month($a1)         # store value into data[i].month
+    sw      $t2, month($a1)         # store value into data[i].month
 
     ############
     # Scan day #
@@ -75,7 +75,7 @@ forloop3:
     beq     $t5, $t4, f_elif
 
     addi    $t2, $t2, 1             # j++
-    beq     $t2, $t0, forloop2		# outer loop
+    beq     $t2, $t0, forloop2      # outer loop
     j       forloop3                # inner loop
 
 f_elif:
@@ -87,8 +87,8 @@ f_elif:
     bne     $t6, $0, swap
     beq     $t5, $t4, s_elif
 
-    addi	$t2, $t2, 1             # j++
-    beq     $t2, $t0, forloop2		# outer loop
+    addi    $t2, $t2, 1             # j++
+    beq     $t2, $t0, forloop2      # outer loop
     j       forloop3                # inner loop
 
 s_elif:
@@ -116,7 +116,7 @@ swap:
     sll     $a1, $t1, 2
     sll     $a2, $t2, 2
 
-    lw    	$t4, year($a1)          # value of data[i].year
+    lw      $t4, year($a1)          # value of data[i].year
     lw      $t5, year($a2)          # value of data[j].year
     sw      $t5, year($a1)          # swap them
     sw      $t4, year($a2)
@@ -126,7 +126,7 @@ swap:
     sw      $t5, month($a1)         # swap them
     sw      $t4, month($a2)
 
-    lw    	$t4, day($a1)           # value of data[i].day
+    lw      $t4, day($a1)           # value of data[i].day
     lw      $t5, day($a2)           # get value of data[j].day
     sw      $t5, day($a1)           # swap them
     sw      $t4, day($a2)
