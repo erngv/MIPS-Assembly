@@ -1,6 +1,6 @@
-# Assembly Projects in MIPS
+## Assembly Projects in MIPS
 
-### This repository contains some assembly code written in the MIPS Assembler and Runtime Simulator. Each project folder also contains the C code from which each respective assembly code was written, as well as input and output sample files to test the `.asm` files. To download the MARS simulator, visit: http://courses.missouristate.edu/KenVollmar/MARS/download.htm 
+#### This repository contains some assembly code written in the MIPS Assembler and Runtime Simulator. Each project folder also contains the C code from which each respective assembly code was written, as well as input and output sample files to test the `.asm` files. To download the MARS simulator, visit: http://courses.missouristate.edu/KenVollmar/MARS/download.htm 
  
 #### `Binomial Coefficient`
 
