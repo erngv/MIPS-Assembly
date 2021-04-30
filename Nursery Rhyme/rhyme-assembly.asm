@@ -98,7 +98,7 @@ thereWasAnOldLady:
     syscall
 
     li      $v0, 4                  # system call 4 is for printing a string
-    la      $a0, semicolon			# semicolon + newline
+    la      $a0, semicolon          # semicolon + newline
     syscall
     j       checkEndFirstLoop
 
@@ -143,7 +143,7 @@ idkWhy:
 
     sll     $s1, $t1, 4
     li      $v0, 4                  # system call 4 is for printing a string
-    la      $a0, animals($s1)		# %s ---> animals[current]);
+    la      $a0, animals($s1)
     syscall
 
     li      $v0, 4                  # system call 4 is for printing a string
