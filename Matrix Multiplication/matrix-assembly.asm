@@ -1,7 +1,6 @@
 #===============================================================================================
 # Matrix Multiplication
 #===============================================================================================
-
 .data
 AA: .space 400                      # int AA[100]
 BB: .space 400                      # int BB[100]
@@ -12,7 +11,6 @@ newline: .asciiz "\n"
 space:   .asciiz " "
 
 .text
-
 main:
     addi    $v0, $0, 5              # system call 5 is for reading an integer
     syscall                         # integer value read is in $v0
