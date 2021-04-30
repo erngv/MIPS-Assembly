@@ -17,8 +17,8 @@ main:
     li      $t1, 0                  # $t1 = initial value of i
 
 forloop1:
-	#############
-	# Scan year #
+    #############
+    # Scan year #
     #############
     addi    $v0, $0, 5              # system call 5 is for reading an integer
     syscall                         # integer value read is in $v0
@@ -26,8 +26,8 @@ forloop1:
     sll     $a1, $t1, 2
     sw      $t2, year($a1)          # store value into data[i].year
 
-	##############
-	# Scan month #
+    ##############
+    # Scan month #
     ##############
     addi    $v0, $0, 5              # system call 5 is for reading an integer
     syscall                         # integer value read is in $v0
@@ -36,7 +36,7 @@ forloop1:
     sw    	$t2, month($a1)         # store value into data[i].month
 
     ############
-	# Scan day #
+    # Scan day #
     ############
     addi    $v0, $0, 5              # system call 5 is for reading an integer
     syscall                         # integer value read is in $v0
@@ -45,7 +45,7 @@ forloop1:
     sw      $t2, day($a1)           # store value into data[i].day
 
     ###########
-	# Scan ID #
+    # Scan ID #
     ###########
     addi    $v0, $0, 5              # system call 5 is for reading an integer
     syscall                         # integer value read is in $v0
@@ -141,7 +141,7 @@ swap:
     j       forloop3                # inner loop	
 
 printloop:
-	##############
+    ##############
     # Print year #
     ##############
     sll     $a2, $t8, 2
