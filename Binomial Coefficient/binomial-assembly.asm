@@ -7,7 +7,7 @@ newline: .asciiz "\n"
 .text
 main:
     ori     $sp, $0, 0x3000         # initialize stack pointer
-    addi    $fp, $sp, -4			# set $fp to the start of main's stack frame
+    addi    $fp, $sp, -4            # set $fp to the start of main's stack frame
 
                                     # read the value of N
     addi    $v0, $0, 5			    # system call 5 is for reading an integer
@@ -15,26 +15,25 @@ main:
     add     $a0, $0, $v0            # copy the value of N into $a0
     beq     $a0, $0, end            # check if N is equal to zero
 
-	                                # read the value of K
-    addi    $v0, $0, 5			    # system call 5 is for reading an integer
-    syscall 				        # integer value read is in $v0
-    add	$a1, $0, $v0			    # copy the value of K into $a1
+                                    # read the value of K
+    addi    $v0, $0, 5              # system call 5 is for reading an integer
+    syscall                         # integer value read is in $v0
+    add	    $a1, $0, $v0            # copy the value of K into $a1
 
     jal	NchooseK
 
-	add 	$a0, $0, $v0            # store value of $v0 into $a0
-	addi 	$v0, $0, 1              # system call 1 is for printing an integer
+    add 	$a0, $0, $v0            # store value of $v0 into $a0
+    addi 	$v0, $0, 1              # system call 1 is for printing an integer
     syscall
-
-  	                                # print new line
-    addi    $v0, $0, 4  			# system call 4 is for printing a string
+                                    # print new line
+    addi    $v0, $0, 4              # system call 4 is for printing a string
     la      $a0, newline
     syscall
 
     j       main
 
 end: 
-    ori     $v0, $0, 10			    # system call 10 is for exit
+    ori     $v0, $0, 10             # system call 10 is for exit
     syscall
 
 NchooseK:
