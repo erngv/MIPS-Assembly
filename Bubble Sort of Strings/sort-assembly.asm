@@ -94,9 +94,9 @@ swapFunc:
     lb 	    $t5, ($a1)              # load character from second string
     sb	    $t5, ($a0)              # store character from string 2 to string 1
     sb	    $t4, ($a1)              # store character from string 1 to string 2
-    add 	$a0, $a0, 1
-    add 	$a1, $a1, 1
+    add     $a0, $a0, 1
+    add     $a1, $a1, 1
 
-    bne 	$t4, $0, swapFunc       # null terminator must be reached for both strings
-    bne 	$t5, $0, swapFunc       # otherwise, keep swaping!
-    j	    endSwapping
+    bne     $t4, $0, swapFunc       # null terminator must be reached for both strings
+    bne     $t5, $0, swapFunc       # otherwise, keep swaping!
+    j       endSwapping
