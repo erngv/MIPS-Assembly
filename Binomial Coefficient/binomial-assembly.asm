@@ -48,25 +48,25 @@ NchooseK:
     sw 	    $a1, -12($fp)           # save $a1
     addi    $sp, $sp, -8            # shift the stack pointer
 
-    addi    $a0, $a0, -1 			# update N = N - 1
-    addi    $a1, $a1, -1 			# update K = K - 1
-    jal     NchooseK 			    # recursive call to NchooseK(N-1, K-1)
+    addi    $a0, $a0, -1            # update N = N - 1
+    addi    $a1, $a1, -1            # update K = K - 1
+    jal     NchooseK                # recursive call to NchooseK(N-1, K-1)
 
-    lw      $a0, -8($fp) 			# restore previous value of N
-    lw      $a1, -12($fp) 			# restore previous value of K
-    sw      $v0, -8($fp)			# store current value of N in $v0
+    lw      $a0, -8($fp)            # restore previous value of N
+    lw      $a1, -12($fp)           # restore previous value of K
+    sw      $v0, -8($fp)            # store current value of N in $v0
 
-    addi    $sp, $sp, 4			    # shift the stack pointer
-    addi    $a0, $a0, -1			# update N = N - 1
-    jal     NchooseK 			    # recursive call to NchooseK(N-1, K)
+    addi    $sp, $sp, 4             # shift the stack pointer
+    addi    $a0, $a0, -1            # update N = N - 1
+    jal     NchooseK                # recursive call to NchooseK(N-1, K)
 
-    lw      $t0, -8($fp)			# restore $v0
-    add     $v0, $v0, $t0			# NchooseK(N-1, K-1) + NchooseK(N-1, K)
-    addi    $sp, $fp, 4			    # restore $sp
-    lw      $ra, 0($fp)     		# restore $ra
-    lw      $fp, -4($fp)    		# restore $fp
-    jr      $ra             		# return from procedure
+    lw      $t0, -8($fp)            # restore $v0
+    add     $v0, $v0, $t0           # NchooseK(N-1, K-1) + NchooseK(N-1, K)
+    addi    $sp, $fp, 4             # restore $sp
+    lw      $ra, 0($fp)             # restore $ra
+    lw      $fp, -4($fp)            # restore $fp
+    jr      $ra                     # return from procedure
 
 baseCase:
     addi    $v0, $0, 1
-	jr      $ra
+    jr      $ra
