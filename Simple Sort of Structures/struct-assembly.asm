@@ -7,7 +7,7 @@ space:   .asciiz " "
 year:	 .space 200
 month:	 .space 200
 day:     .space 200
-ID:		 .space 200
+ID:      .space 200
 
 .text
 main:
